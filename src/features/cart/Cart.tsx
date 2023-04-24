@@ -68,20 +68,20 @@ function Cart(){
             <h1>Payment Info</h1>
             <div className='invoice'>
                 <span>Item Price</span>
-                <span className='right'>${totalCost.toFixed(2)}</span>
+                <span className='right'>Rs.{totalCost.toFixed(2)}</span>
             </div>
             <div className='invoice'>
                 <span>Tax</span>
-                <span className='right'>${totalTax.toFixed(2)}</span>
+                <span className='right'>Rs.{totalTax.toFixed(2)}</span>
             </div>
             <div className='invoice'>
                 <span>Shipping Charge</span>
-                <span className='right'>${shippingCharges.toFixed(2)}</span>
+                <span className='right'>Rs.{shippingCharges.toFixed(2)}</span>
             </div>
             <hr />
             <div className='invoice'>
                 <span>Total</span>
-                <span className='right'>${totalToPay.toFixed(2)}</span>
+                <span className='right'>Rs.{totalToPay.toFixed(2)}</span>
             </div>
             <button className='pay-btn' onClick={()=>{
                     if(items.length > 0){

@@ -1,8 +1,13 @@
 .book{
     width: 19%;
-    border: 2px solid red;
+    border: 3px groove rgb(61, 61, 61);
     margin:0 5px 20px;
-    background-color: rgb(200, 197, 197);
+    background-color: rgb(218, 218, 218);
+}
+
+.book:hover{
+    border: 3px groove rgb(255, 165, 165);
+    box-shadow: 10px 10px 5px rgb(203, 203, 203);
 }
 
 .book-img{

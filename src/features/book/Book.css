@@ -1,7 +1,7 @@
 .book{
-    border: 2px solid rgb(134, 78, 78);
+    border: 2px groove rgb(95, 94, 94);
     margin:0 5px 20px;
-    background-color: rgb(221, 171, 171);
+    background-color: rgb(177, 177, 177);
     position: relative;
 }
 .book-img{

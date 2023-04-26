@@ -22,7 +22,6 @@ function Cart(){
     const totalTax=totalCost*0.18;
     const shippingCharges=items.length > 0 ? 5:0;
     const totalToPay=totalCost + totalTax + shippingCharges;
-    const address1=useAppSelector(state=>state.address);
 
     const address:any={};
     function onChangeField(e:React.ChangeEvent<HTMLInputElement>){

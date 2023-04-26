@@ -1,11 +1,11 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import Cart from './features/cart/Cart';
+import { Route,Routes } from 'react-router-dom';
 import DisplayBooks from './features/book/DisplayBooks';
 import SelectedBook from './features/bookDetail/SelectedBook';
 import MyOrders from './features/order/MyOrders';
 import NoMatch from './components/NoMatch';
-import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route path='*' element={<NoMatch />}/>
       </Routes>
     </>
+  
   );
 }
 

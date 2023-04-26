@@ -1,14 +1,14 @@
 import OrderItem from "./OrderItem";
 import './MyOrders.css';
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { useAppDispatch,useAppSelector } from "../../app/hooks";
 import { updateTitle } from "../title/titleSlice";
 
 function MyOrders(){
 
-    const dispatch = useAppDispatch();
+    const dispatch=useAppDispatch();
     dispatch(updateTitle('My Orders'));
 
-    const myOrders = useAppSelector(state=>state.order.orders)
+    const myOrders=useAppSelector(state=>state.order.orders)
     console.log("My orders are",myOrders);
     
     return <div className="orders">

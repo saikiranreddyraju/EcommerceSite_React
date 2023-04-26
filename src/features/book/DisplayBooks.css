@@ -1,10 +1,14 @@
 .books{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px 10px;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap:20px;
+    padding: 20px 0;
 }
 
+.show-more-wrapper{
+    display: grid;
+    align-items: center;
+}
 .show-more{
     background: none;
     border: none;
@@ -12,3 +16,26 @@
     font-weight: bold;
     font-size: 16px;
 }
+
+@media only screen and (max-width: 900px) {
+    .books{
+        grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+    .books{
+        grid-template-columns: auto auto auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+    .books{
+        grid-template-columns: auto auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+    .books{
+        grid-template-columns: 80%;        
+  }
+}
+

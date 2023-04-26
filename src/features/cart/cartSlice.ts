@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 export type cartItemType={
     title:string,
@@ -16,7 +16,7 @@ const initialState : InitialState={
     cartItems:[]
 }
 
-const cartSlice = createSlice({
+const cartSlice=createSlice({
     name:'cart',
     initialState,
     reducers:{
@@ -38,7 +38,7 @@ const cartSlice = createSlice({
                     return book.title !==action.payload.title
                 });
             }else{
-                bookFound.quantity-=1;
+                bookFound.quantity=bookFound.quantity-1;
             }
         },
         clearCart:(state)=>{
@@ -48,4 +48,4 @@ const cartSlice = createSlice({
 });
 
 export default cartSlice.reducer;
-export const{ addToCart,clearCart,removeBook }=cartSlice.actions;
+export const{addToCart,clearCart,removeBook}=cartSlice.actions;

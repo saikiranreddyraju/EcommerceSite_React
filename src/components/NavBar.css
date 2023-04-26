@@ -1,5 +1,5 @@
 .nav-bar{
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(221, 171, 171);
     list-style: none;
     overflow: hidden;
     padding: 0 20px;
@@ -9,7 +9,6 @@
     display: inline;
     float: left;
     padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 li{
@@ -36,7 +35,7 @@ li a.active{
 }
 
 .cartCount{
-    background-color: violet;
+    background-color: green;
     padding:0px 5px;
     border-radius: 5px;
     color: white;

@@ -1,14 +1,14 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
-type InitialState = {
+type InitialState={
     orders:object[]
 }
 
-const initialState : InitialState = {
+const initialState : InitialState={
     orders:[]
 }
-const orderSlice = createSlice({
-    name: 'order',
+const orderSlice=createSlice({
+    name:'order',
     initialState,
     reducers:{
         addOrder:(state,action)=>{
@@ -18,4 +18,4 @@ const orderSlice = createSlice({
 });
 
 export default orderSlice.reducer;
-export const { addOrder } = orderSlice.actions
+export const {addOrder}=orderSlice.actions

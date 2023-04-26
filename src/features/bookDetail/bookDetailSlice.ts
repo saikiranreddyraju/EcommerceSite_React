@@ -1,19 +1,19 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { BookType } from "../book/bookSlice";
 
-type InitialState={                  /*   Define a type for the slice state */
+type InitialState={
     loading:boolean,
     books:BookType[],
     error:string
 }
 
-const initialState:InitialState={      /*  Define the initial state using that type */
+const initialState:InitialState={
     loading:false,
     books:[],
     error:''
 }
 
-const bookDetailSlice = createSlice({
+const bookDetailSlice=createSlice({
     name:'bookItem',
     initialState,
     reducers:{
@@ -35,4 +35,5 @@ const bookDetailSlice = createSlice({
 
 
 export default bookDetailSlice.reducer;
-export const { getBookDetailRequest, getBookDetailSuccess, getBookDetailError } = bookDetailSlice.actions;
+
+export const {getBookDetailRequest,getBookDetailSuccess,getBookDetailError}=bookDetailSlice.actions;

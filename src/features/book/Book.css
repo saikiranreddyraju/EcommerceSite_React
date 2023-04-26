@@ -1,29 +1,23 @@
 .book{
-    width: 19%;
-    border: 3px groove rgb(61, 61, 61);
+    border: 2px solid rgb(134, 78, 78);
     margin:0 5px 20px;
-    background-color: rgb(218, 218, 218);
+    background-color: rgb(221, 171, 171);
+    position: relative;
 }
-
-.book:hover{
-    border: 3px groove rgb(255, 165, 165);
-    box-shadow: 10px 10px 5px rgb(203, 203, 203);
-}
-
 .book-img{
     width: 100%;
     background-size: cover;
 }
 
 .buy-now{
-    width: 100%;
-    background: none;
+    width: 90%;
     border: none;
     background-color: brown;
     color: white;
     padding: 5px;
-    display: block;
-    margin: 0 auto;
+    display: block; 
+    position: absolute;
+    bottom: 0px;
 }
 
 .buy-now:hover,.book-img-div:hover{
@@ -32,6 +26,7 @@
 
 .description{
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .description p,h2{

@@ -17,24 +17,18 @@ export type BookType={
 type InitialState={
     loading:boolean,
     books:BookType[],
-    error:string
+    error:string,
+    count:number,
 }
 
 const initialState : InitialState={
     loading:false,
     books:[],
-    error:''
+    error:'',
+    count:10,
 }
 
-// export const fetchBooks=createAsyncThunk('book/fetchBooks',()=>{
-//     return axios.get('http://localhost:3000/books')
-//     .then(response=>{
-//         console.log("Response data is",response.data);
-//         return response.data;
-//     })
-// });
-
-const bookSlice = createSlice({
+const bookSlice=createSlice({
     name:'book',
     initialState,
     reducers:{
@@ -43,32 +37,25 @@ const bookSlice = createSlice({
         },
         getBooksSuccess:(state,action)=>{
             state.loading=false;
-            state.books=action.payload;
+            state.books=action.payload.slice(0,state.count);
             state.error=''
         },
         getBooksError:(state,action)=>{
             state.loading=false;
             state.books=[];
             state.error=action.payload.error.message || 'Something Went wrong';
+        },
+        updateBooks:(state)=>{
+            state.count=state.count+10;
+        },
+        reduceBooks:(state) =>{
+            state.count=state.count-10;
         }
 
     },
-    // extraReducers:(builder)=>{
-    //     builder.addCase(fetchBooks.pending,(state)=>{
-    //         state.loading=true
-    //     })
-    //     builder.addCase(fetchBooks.fulfilled,(state,action)=>{
-    //         state.loading=false;
-    //         state.books=action.payload;
-    //         state.error=''
-    //     })
-    //     builder.addCase(fetchBooks.rejected,(state,action)=>{
-    //         state.loading=false;
-    //         state.books=[];
-    //         state.error=action.error.message || 'Something Went wrong';
-    //     })
-    // }
+
 })
 
-export const { getBooksRequest, getBooksSuccess, getBooksError } = bookSlice.actions;
+export const {getBooksRequest,getBooksSuccess,getBooksError,updateBooks,reduceBooks}=bookSlice.actions;
+
 export default bookSlice.reducer;

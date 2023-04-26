@@ -5,7 +5,7 @@
 }
 
 .address{
-    border: 1px solid rgb(124, 124, 124);
+    border: 1px solid red;
     margin-top: 10px;
     padding: 10px;
 }
@@ -22,14 +22,13 @@ input{
     margin:10px 20px 10px 0px;
     border: none;
     background: none;
-    background-color: rgb(255, 0, 0);
+    background-color: brown;
     color: white;
     padding: 7px;
 }
 
 .shipping,.shopping{
     width: 50%;
-    position: relative;
 }
 
 .selected-books{
@@ -53,4 +52,20 @@ input{
     border: none;
     padding: 5px 25px;
     margin: 10px;
+}
+
+@media only screen and (max-width: 660px) {
+    .cart{
+       flex-direction: column; 
+    }
+    .shipping,.shopping{
+    width: 100%;
+    }
+    
+}
+@media only screen and (max-width: 400px) {
+    .address{
+        display: flex;
+       flex-direction: column; 
+  }
 }

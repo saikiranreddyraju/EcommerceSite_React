@@ -4,8 +4,8 @@ function OrderItem(props:any){
 
     return <div className="order-item">
         <div className="order-details">
-            <p className="left">Order Placed : {new Date().toDateString()}</p>
-            <p className="right">Status : Delivered</p>
+            <p className="left">Order Placed: {new Date().toDateString()}</p>
+            <p className="right">Status: Delivered</p>
         </div>
         <div className='order-description'>
             <img src={props.order.imgSource} alt='Book.png'/>
